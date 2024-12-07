@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select ".product", 2
+    assert_select ".product", 3
   end
 
   test "render a detailed product page" do
@@ -30,7 +30,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         title: "Xiaomi",
         description: "Poco X3 pro",
         price: 250,
-        stock: 2
+        stock: 2,
+        category_id: categories(:technology).id
       }
     }
 
