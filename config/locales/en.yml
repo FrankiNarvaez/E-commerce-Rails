@@ -79,6 +79,7 @@ en:
       title: "Categories"
       edit: "Edit"
       delete: "Delete"
+      add_category: "Add Category"
     new:
       title: "Create new category"
     edit:
@@ -92,7 +93,7 @@ en:
   shared:
     header:
       add_product: "Add product"
-      add_category: "Add category"
+      categories: "Categories"
   common:
     confirm: "Are you sure?"
     back: "Back"
