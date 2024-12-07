@@ -2,3 +2,7 @@
 <p class="description"><%= @product.description %></p>
 <span class="price">$ <%= @product.price %></span>
 <span>stock: <%= @product.stock %></span>
+<%= link_to "Edit", edit_product_path(@product.id) %>
+<%= link_to "Delete", product_path(@product.id), data: {
+  turbo_method: :delete
+} %>
