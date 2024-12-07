@@ -32,6 +32,7 @@ en:
   activerecord:
     models:
       product: "Product"
+      category: "Category"
     attributes:
       product:
         title: "Title"
@@ -39,18 +40,24 @@ en:
         price: "Price"
         stock: "Stock"
         photo: "Picture"
+      category:
+        name: "Name"
     errors:
       models:
         product:
           attributes:
             title:
-              blank: "coul not be empty"
+              blank: "could not be empty"
             description:
-              blank: "coul not be empty"
+              blank: "could not be empty"
             price:
-              blank: "coul not be empty"
+              blank: "could not be empty"
             stock:
-              blank: "coul not be empty"
+              blank: "could not be empty"
+        category:
+          attributes:
+            name:
+              blank: "could not be empty"
   products:
     index:
       title: "Products"
@@ -67,6 +74,21 @@ en:
     show:
       edit: "Edit"
       delete: "Delete"
+  categories:
+    index:
+      title: "Categories"
+      edit: "Edit"
+      delete: "Delete"
+    new:
+      title: "Create new category"
+    edit:
+      title: "Edit category"
+    create:
+      created: "Your category was created"
+    update:
+      updated: "Your category was updated"
+    destroy:
+      destroyed: "Your category was deleted"
   shared:
     header:
       add_product: "Add product"
