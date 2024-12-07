@@ -25,9 +25,12 @@ module ECommerceRails
     # config.eager_load_paths << Rails.root.join("extras")
 
     # available languages
-    config.i18n.available_locales = [ :en, :es ]
+    config.i18n.available_locales = %i[ en es ]
 
     # language by default
     config.i18n.default_locale = :en
+
+    # allow multiquery
+    config.active_record.async_query_executor = :global_thread_pool
   end
 end
