@@ -28,4 +28,48 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  app_title: "Ecommerce"
+  activerecord:
+    models:
+      product: "Product"
+    attributes:
+      product:
+        title: "Title"
+        description: "Description"
+        price: "Price"
+        stock: "Stock"
+        photo: "Picture"
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "coul not be empty"
+            description:
+              blank: "coul not be empty"
+            price:
+              blank: "coul not be empty"
+            stock:
+              blank: "coul not be empty"
+  products:
+    index:
+      title: "Products"
+    new:
+      title: "Create a new product"
+    edit:
+      title: "Edit product"
+    create:
+      created: "Your product was created"
+    update:
+      updated: "Your product was updated"
+    destroy:
+      destroyed: "Your product was deleted"
+    show:
+      edit: "Edit"
+      delete: "Delete"
+  shared:
+    header:
+      add_product: "Add product"
+      add_category: "Add category"
+  common:
+    confirm: "Are you sure?"
