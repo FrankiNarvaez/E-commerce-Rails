@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
 
-    redirect_to categories_params, status: :see_other, notice: t(".destroyed")
+    redirect_to categories_path, status: :see_other, notice: t(".destroyed")
   end
 
   private
