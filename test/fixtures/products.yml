@@ -5,9 +5,18 @@ iphone:
   description: Iphone 15 pro max
   price: 1500
   stock: 12
+  category: technology
 
 samsung:
   title: Samsung
   description: Samsung Galaxy S20+ 5G
   price: 1300
-  stock: 5
+  stock: 200
+  category: technology
+
+gtav:
+  title: GTAV
+  description: The popular videogame Grand Theft Auto Five
+  price: 200
+  stock: 200
+  category: videogames
