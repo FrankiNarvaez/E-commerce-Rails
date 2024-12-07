@@ -1,8 +1,12 @@
+<div>
+  <%= image_tag @product.photo, width: 200, height: 200 if @product.photo.attached? %>
+</div>
 <h2 class="title"><%= @product.title %></h2>
 <p class="description"><%= @product.description %></p>
 <span class="price">$ <%= @product.price %></span>
 <span>stock: <%= @product.stock %></span>
-<%= link_to "Edit", edit_product_path(@product.id) %>
-<%= link_to "Delete", product_path(@product.id), data: {
-  turbo_method: :delete
+<%= link_to t('.edit'), edit_product_path(@product.id) %>
+<%= link_to t('.delete'), product_path(@product.id), data: {
+  turbo_method: :delete,
+  turbo_confirm: t('common.confirm')
 } %>
