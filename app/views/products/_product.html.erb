@@ -1,4 +1,4 @@
-<%= link_to product_path(product.id), class: "product" do %>
+<%= link_to product_path(product.id), class: "product", "data-turbo-frame": "_top" do %>
   <div>
     <%= image_tag product.photo, width: 200, height: 200 if product.photo.attached? %>
   </div>
