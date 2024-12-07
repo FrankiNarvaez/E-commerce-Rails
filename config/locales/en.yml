@@ -61,6 +61,10 @@ en:
   products:
     index:
       title: "Products"
+      all: "All"
+      min_price: "Min price"
+      max_price: "Max price"
+      filter: "Filter"
     new:
       title: "Create a new product"
     edit:
