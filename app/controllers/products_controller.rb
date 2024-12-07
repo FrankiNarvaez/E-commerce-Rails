@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   def index
-    @products = Product.all.with_attached_photo
+    @products = Product.all.with_attached_photo.order(created_at: :desc)
   end
 
   def show
