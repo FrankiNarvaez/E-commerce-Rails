@@ -22,9 +22,17 @@ class CategoriesController < ApplicationController
   end
 
   def update
+    if @category.update(categories_params)
+      redirect_to categories_path, notice: t(".updated")
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @category.destroy
+
+    redirect_to categories_params, status: :see_other, notice: t(".destroyed")
   end
 
   private
