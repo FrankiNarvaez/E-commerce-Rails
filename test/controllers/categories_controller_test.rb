@@ -5,7 +5,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     get categories_path
 
     assert_response :success
-    assert_select ".category", 2
+    assert_select ".category", 10
   end
 
   test "create a new category" do

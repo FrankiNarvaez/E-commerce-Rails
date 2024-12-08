@@ -5,16 +5,16 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select ".product", 3
+    assert_select ".product", 20
   end
 
   test "render a detailed product page" do
     get product_path(products(:iphone))
 
     assert_response :success
-    assert_select ".title", "Iphone"
-    assert_select ".description", "Iphone 15 pro max"
-    assert_select ".price", "$ 1500"
+    assert_select ".title", "iPhone 13"
+    assert_select ".description", "Funciona correctamente."
+    assert_select ".price", "$ 400"
   end
 
   test "render a new product form" do
