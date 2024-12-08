@@ -33,6 +33,7 @@ en:
     models:
       product: "Product"
       category: "Category"
+      user: "User"
     attributes:
       product:
         title: "Title"
@@ -47,22 +48,6 @@ en:
         email: "Email"
         name: "Full name"
         password: "Password"
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "could not be empty"
-            description:
-              blank: "could not be empty"
-            price:
-              blank: "could not be empty"
-            stock:
-              blank: "could not be empty"
-        category:
-          attributes:
-            name:
-              blank: "could not be empty"
   products:
     index:
       title: "Products"
