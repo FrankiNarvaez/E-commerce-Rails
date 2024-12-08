@@ -1,7 +1,31 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-technology:
-  name: technology
-
 videogames:
-  name: videogames
+  name: Videogames
+
+computers:
+  name: Informatic
+
+technology:
+  name: Technology
+
+clothes:
+  name: Clothes
+
+cars:
+  name: Cars
+
+music:
+  name: Music
+
+electronic:
+  name: Electronics
+
+books:
+  name: Books
+
+mobile:
+  name: Mobile
+
+sports:
+  name: Sports
