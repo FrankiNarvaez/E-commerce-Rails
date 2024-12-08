@@ -102,3 +102,7 @@ en:
   common:
     confirm: "Are you sure?"
     back: "Back"
+  authentication:
+    users:
+      create:
+        created: "Successful registration"
