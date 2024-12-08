@@ -1,6 +1,10 @@
 require "test_helper"
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    login
+  end
+
   test "render a list of categories" do
     get categories_path
 
