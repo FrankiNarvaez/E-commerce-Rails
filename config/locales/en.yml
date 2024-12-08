@@ -104,6 +104,9 @@ en:
     header:
       add_product: "Add product"
       categories: "Categories"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+      logout: "Logout"
   common:
     confirm: "Are you sure?"
     back: "Back"
@@ -111,7 +114,12 @@ en:
     users:
       create:
         created: "Successful registration"
+      new:
+        have_account: "sign up"
     sessions:
       create:
         created: "Welcome"
         failed: "Your username/email or password is incorrect"
+      new:
+        no_have_account: "sign in"
+  no_session: "To continue sign in"

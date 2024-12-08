@@ -3,3 +3,6 @@
 <% end %>
 <%= link_to t('.add_product'), new_product_path if Current.user %>
 <%= link_to t('.categories'), categories_path if Current.user %>
+<%= link_to t('.sign_in'), new_session_path unless Current.user %>
+<%= link_to t('.sign_up'), new_user_path unless Current.user %>
+<%= link_to t('.logout'), new_session_path if Current.user %>

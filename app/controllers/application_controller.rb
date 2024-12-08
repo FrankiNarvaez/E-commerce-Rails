@@ -23,6 +23,6 @@ class ApplicationController < ActionController::Base
   end
 
   def protect_pages
-    redirect_to new_session_path unless Current.user
+    redirect_to new_session_path, alert: t("no_session") unless Current.user
   end
 end
