@@ -119,7 +119,9 @@ en:
     sessions:
       create:
         created: "Welcome"
-        failed: "Your username/email or password is incorrect"
+        failed: "Invalid credentials!"
       new:
         no_have_account: "sign in"
+      destroy:
+        destroyed: "You are logout"
   no_session: "To continue sign in"
