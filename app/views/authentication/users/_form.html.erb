@@ -16,8 +16,13 @@
   </div>
 
   <div>
-    <%= form.label :password_digest %>
-    <%= form.password_field :password_digest %>
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
   </div>
 
   <%= form.submit %>

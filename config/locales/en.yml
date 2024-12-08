@@ -42,6 +42,11 @@ en:
         photo: "Picture"
       category:
         name: "Name"
+      user:
+        username: "Username"
+        email: "Email"
+        name: "Full name"
+        password: "Password"
     errors:
       models:
         product:
@@ -106,3 +111,7 @@ en:
     users:
       create:
         created: "Successful registration"
+    sessions:
+      create:
+        created: "Welcome"
+        failed: "Your username/email or password is incorrect"
