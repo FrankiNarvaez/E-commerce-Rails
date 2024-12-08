@@ -6,6 +6,7 @@ iphone:
   price: 1500
   stock: 12
   category: technology
+  user: fran
 
 samsung:
   title: Samsung
@@ -13,6 +14,7 @@ samsung:
   price: 1300
   stock: 200
   category: technology
+  user: fran
 
 gtav:
   title: GTAV
@@ -20,6 +22,7 @@ gtav:
   price: 200
   stock: 200
   category: videogames
+  user: fran
 
 ps4:
   title: PS4 Fat
@@ -27,6 +30,7 @@ ps4:
   price: 150
   stock: 200
   category: videogames
+  user: fran
 
 switch:
   title: Nintendo Switch
@@ -34,6 +38,7 @@ switch:
   price: 195
   stock: 200
   category: videogames
+  user: fran
 
 nintendo64:
   title: Nintendo 64 en buen estado
@@ -41,6 +46,7 @@ nintendo64:
   price: 190
   stock: 200
   category: videogames
+  user: fran
 
 megadrive:
   title: Sega Megadrive
@@ -48,6 +54,7 @@ megadrive:
   price: 90
   stock: 200
   category: videogames
+  user: fran
 
 driver2:
   title: Driver 2 para ps1
@@ -55,6 +62,7 @@ driver2:
   price: 25
   stock: 200
   category: videogames
+  user: franki
 
 ps5:
   title: PS5 nueva sin lector
@@ -62,6 +70,7 @@ ps5:
   price: 650
   stock: 200
   category: videogames
+  user: franki
 
 gameboy:
   title: Game Boy Color
@@ -69,6 +78,7 @@ gameboy:
   price: 150
   stock: 200
   category: videogames
+  user: franki
 
 air:
   title: Macbook Air
@@ -76,6 +86,7 @@ air:
   price: 250
   stock: 200
   category: computers
+  user: franki
 
 imac:
   title: iMac 27" 2015
@@ -83,6 +94,7 @@ imac:
   price: 90
   stock: 200
   category: computers
+  user: franki
 
 ryzen:
   title: Ryzen 5950x
@@ -90,6 +102,7 @@ ryzen:
   price: 590
   stock: 200
   category: computers
+  user: franki
 
 nvidia:
   title: Nvidia 3090ti
@@ -97,6 +110,7 @@ nvidia:
   price: 1500
   stock: 200
   category: computers
+  user: franki
 
 ram:
   title: 16GB Ram DDR4 3200mhz
@@ -104,6 +118,7 @@ ram:
   price: 95
   stock: 200
   category: computers
+  user: franki
 
 renault:
   title: Renault Clio 2009
@@ -111,6 +126,7 @@ renault:
   price: 4500
   stock: 200
   category: cars
+  user: franki
 
 seat:
   title: Seat Panda clásico
@@ -118,6 +134,7 @@ seat:
   price: 5500
   stock: 200
   category: cars
+  user: franki
 
 michael:
   title: Vinilo Michael Jackson Thriller
@@ -125,6 +142,7 @@ michael:
   price: 45
   stock: 200
   category: music
+  user: fran
 
 queen:
   title: Vinilo Queen
@@ -132,6 +150,7 @@ queen:
   price: 35
   stock: 200
   category: music
+  user: fran
 
 tv:
   title: Televisión LG 48 pulgadas
@@ -139,6 +158,7 @@ tv:
   price: 350
   stock: 200
   category: electronic
+  user: fran
 
 kindle:
   title: Lector de libros Kindle 2010
@@ -146,6 +166,7 @@ kindle:
   price: 35
   stock: 200
   category: electronic
+  user: fran
 
 ipod:
   title: iPod touch
@@ -153,6 +174,7 @@ ipod:
   price: 175
   stock: 200
   category: electronic
+  user: fran
 
 harry:
   title: Colección entera de Harry Potter
@@ -160,6 +182,7 @@ harry:
   price: 65
   stock: 200
   category: books
+  user: fran
 
 hobbit:
   title: El hobbit
@@ -167,6 +190,7 @@ hobbit:
   price: 15
   stock: 200
   category: books
+  user: fran
 
 iphone:
   title: iPhone 13
@@ -174,6 +198,7 @@ iphone:
   price: 400
   stock: 200
   category: mobile
+  user: franki
 
 pixel:
   title: Google Pixel 4
@@ -181,6 +206,7 @@ pixel:
   price: 100
   stock: 200
   category: mobile
+  user: fran
 
 surf:
   title: Tabla de surf
@@ -188,6 +214,7 @@ surf:
   price: 125
   stock: 200
   category: sports
+  user: fran
 
 tennis:
   title: Raqueta de tenis profesional
@@ -195,6 +222,7 @@ tennis:
   price: 135
   stock: 200
   category: sports
+  user: fran
 
 skate:
   title: Skateboard
@@ -202,3 +230,4 @@ skate:
   price: 75
   stock: 200
   category: sports
+  user: fran
