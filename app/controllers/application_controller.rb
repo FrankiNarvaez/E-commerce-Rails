@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   include Authorization
   include Language
   include Pagy::Backend
+
+  rescue_from ActiveRecord::RecordNotFound do
+    redirect_to products_path, alert: t("not_found")
+  end
 end

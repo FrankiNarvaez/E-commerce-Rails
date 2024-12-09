@@ -69,6 +69,7 @@ en:
     show:
       edit: "Edit"
       delete: "Delete"
+      show_more: "Show more product of %{username}"
   categories:
     index:
       title: "Categories"
@@ -85,6 +86,9 @@ en:
       updated: "Your category was updated"
     destroy:
       destroyed: "Your category was deleted"
+  users:
+    show:
+      title: "Profile"
   shared:
     header:
       add_product: "Add product"
@@ -111,3 +115,4 @@ en:
         destroyed: "You are logout"
   no_session: "To continue sign in"
   not_authorized: "You aren't authorized for this action!"
+  not_found: "Not found"

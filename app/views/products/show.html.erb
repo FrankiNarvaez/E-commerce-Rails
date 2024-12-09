@@ -10,3 +10,4 @@
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
 } if @product.owner? %>
+<%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) %>
