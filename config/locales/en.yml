@@ -110,3 +110,4 @@ en:
       destroy:
         destroyed: "You are logout"
   no_session: "To continue sign in"
+  not_authorized: "You aren't authorized for this action!"

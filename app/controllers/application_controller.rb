@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
 
   include Pagy::Backend
 
+  class NotAuthirizedError < StandardError; end
+
+  rescue_from NotAuthirizedError do
+    redirect_to products_path, alert: t("not_authorized")
+  end
+
   around_action :switch_locale
   before_action :set_current_user
   before_action :protect_pages
@@ -24,5 +30,10 @@ class ApplicationController < ActionController::Base
 
   def protect_pages
     redirect_to new_session_path, alert: t("no_session") unless Current.user
+  end
+
+  def authorize!(product)
+    is_allowed = product.user_id == Current.user.id
+    raise NotAuthirizedError unless is_allowed
   end
 end

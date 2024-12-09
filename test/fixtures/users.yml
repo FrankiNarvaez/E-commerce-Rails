@@ -5,9 +5,11 @@ franki:
   name: franki
   username: franki
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: true
 
 fran:
   email: fran@shop.com
   name: fran
   username: fran
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: false

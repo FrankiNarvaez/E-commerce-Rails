@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    authorize! @product
   end
 
   def update
