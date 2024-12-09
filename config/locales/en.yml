@@ -86,6 +86,9 @@ en:
       updated: "Your category was updated"
     destroy:
       destroyed: "Your category was deleted"
+  favorites:
+    index:
+      title: "My favorites"
   users:
     show:
       title: "Profile"
@@ -96,6 +99,7 @@ en:
       sign_in: "Sign in"
       sign_up: "Sign up"
       logout: "Logout"
+      favorites: "My favorites"
   common:
     confirm: "Are you sure?"
     back: "Back"
