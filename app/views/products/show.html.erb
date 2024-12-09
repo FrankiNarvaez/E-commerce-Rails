@@ -5,8 +5,8 @@
 <p class="description"><%= @product.description %></p>
 <span class="price">$ <%= @product.price %></span>
 <span>stock: <%= @product.stock %></span>
-<%= link_to t('.edit'), edit_product_path(@product.id) if Current.user&.id == @product.user_id%>
+<%= link_to t('.edit'), edit_product_path(@product.id) if @product.owner? %>
 <%= link_to t('.delete'), product_path(@product.id), data: {
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
-} if Current.user&.id == @product.user_id %>
+} if @product.owner? %>

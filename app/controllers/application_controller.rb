@@ -32,8 +32,8 @@ class ApplicationController < ActionController::Base
     redirect_to new_session_path, alert: t("no_session") unless Current.user
   end
 
-  def authorize!(product)
-    is_allowed = product.user_id == Current.user.id
+  def authorize!(record = nil)
+    is_allowed = "#{controller_name.singularize}Policy".classify.constantize.new(record).send(action_name)
     raise NotAuthirizedError unless is_allowed
   end
 end
