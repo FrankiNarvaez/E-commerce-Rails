@@ -1,13 +1,21 @@
 <div>
   <%= image_tag @product.photo, width: 200, height: 200 if @product.photo.attached? %>
 </div>
+
 <h2 class="title"><%= @product.title %></h2>
 <p class="description"><%= @product.description %></p>
 <span class="price">$ <%= @product.price %></span>
 <span>stock: <%= @product.stock %></span>
+
 <%= link_to t('.edit'), edit_product_path(@product.id) if @product.owner? %>
 <%= link_to t('.delete'), product_path(@product.id), data: {
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
 } if @product.owner? %>
 <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) %>
+
+<% if @product.favorite %>
+  <%= link_to "dislike", favorite_path(@product.id), data: { turbo_method: :delete } %>
+<% else %>
+  <%= link_to "like", favorites_path(product_id: @product.id), data: { turbo_method: :post } %>
+<% end %>

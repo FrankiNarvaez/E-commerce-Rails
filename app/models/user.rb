@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }
 
   has_many :products, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 end
