@@ -54,6 +54,6 @@ class ProductsController < ApplicationController
   end
 
   def filter_params
-    params.permit(:query_text, :min_price, :max_price, :order_by, :page, :favorites)
+    params.permit(:query_text, :min_price, :max_price, :order_by, :page, :favorites, :user_id)
   end
 end
