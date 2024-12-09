@@ -14,8 +14,4 @@
 } if @product.owner? %>
 <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) %>
 
-<% if @product.favorite %>
-  <%= link_to "dislike", favorite_path(@product.id), data: { turbo_method: :delete } %>
-<% else %>
-  <%= link_to "like", favorites_path(product_id: @product.id), data: { turbo_method: :post } %>
-<% end %>
+<%= render partial: "favorite", locals: { product: @product } %>
