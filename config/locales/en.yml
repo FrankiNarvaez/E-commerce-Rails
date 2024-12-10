@@ -67,6 +67,7 @@ en:
     destroy:
       destroyed: "Your product was deleted"
     show:
+      add_to_cart: "Add to cart"
       edit: "Edit"
       delete: "Delete"
       show_more: "Show more product of %{username}"
@@ -92,6 +93,10 @@ en:
   shopping_carts: 
     index:
       title: "My shopping cart"
+    create:
+      created: "Added to cart"
+    destroy:
+      destroyed: "Removedo from cart"
   users:
     show:
       title: "Profile"

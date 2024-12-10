@@ -1,5 +1,6 @@
 class FindProducts
   attr_reader :products
+
   def initialize(products = initial_scope)
     @products = products
   end
@@ -12,6 +13,7 @@ class FindProducts
     scoped = filter_by_query_text(scoped, params[:query_text])
     scoped = filter_by_user_id(scoped, params[:user_id])
     scoped = filter_by_favorites(scoped, params[:favorites])
+    scoped = filter_by_shopping_cart(scoped, params[:shopping_cart])
     sort(scoped, params[:order_by])
   end
 
@@ -61,5 +63,11 @@ class FindProducts
     return scoped unless favorites.present?
 
     scoped.joins(:favorites).where({ favorites: { user_id: Current.user.id } })
+  end
+
+  def filter_by_shopping_cart(scoped, shopping_cart)
+    return scoped unless shopping_cart.present?
+
+    scoped.joins(:shopping_carts).where({ shopping_carts: { user_id: Current.user.id } })
   end
 end

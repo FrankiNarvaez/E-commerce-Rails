@@ -1,5 +1,6 @@
 class ShoppingCartsController < ApplicationController
   def index
+    @pagy, @products = pagy_countless(FindProducts.new.call({ shopping_cart: true }).load_async, limit: 12)
   end
 
   def create
@@ -9,10 +10,12 @@ class ShoppingCartsController < ApplicationController
       product.shopping_carts.create(user: Current.user, amount: 1)
     end
 
-    redirect_to product_path(product.id), notice: "Added to cart"
+    redirect_to product_path(product.id), notice: t(".created")
   end
 
   def destroy
+    product.shopping_cart.destroy
+    redirect_to shopping_carts_path, notice: t(".destroyed")
   end
 
   private
