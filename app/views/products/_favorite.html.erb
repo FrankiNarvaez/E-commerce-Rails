@@ -1,7 +1,7 @@
 <div id="<%= "favorite-#{product.id}" %>">
   <% if product.favorite %>
-    <%= link_to "dislike", favorite_path(product.id), data: { turbo_method: :delete } %>
+    <%= link_to "#{image_tag "icons/favorite.svg", tag: "Add to favorites", class: "w-10 h-10 bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90"}".html_safe, favorite_path(product.id), data: { turbo_method: :delete } %>
   <% else %>
-    <%= link_to "like", favorites_path(product_id: product.id), data: { turbo_method: :post } %>
+    <%= link_to "#{image_tag "icons/unfavorite.svg", tag: "Remove to favorites", class: "w-10 h-10 bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90"}".html_safe, favorites_path(product_id: product.id), data: { turbo_method: :post } %>
   <% end %>  
 </div>

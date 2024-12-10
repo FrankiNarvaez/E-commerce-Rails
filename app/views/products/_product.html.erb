@@ -1,8 +1,13 @@
-<%= link_to product_path(product.id), class: "product", "data-turbo-frame": "_top" do %>
-  <div>
-    <%= image_tag product.photo, width: 200, height: 200 if product.photo.attached? %>
+<section class="p-5 border-2 hover:border-main-color/50 hover:shadow-zinc-50 w-80 h-auto rounded-xl">
+  <%= link_to product_path(product.id), class: "product", "data-turbo-frame": "_top" do %>
+    <%= image_tag product.photo.attached? ? product.photo : "placeholder.jpg", class: "w-full rounded" %>
+    <div class="flex justify-between mt-3">
+      <h2 class="font-semibold hover:text-main-color"><%= product.title %></h2>
+      <span class="text-black/50"><%= product.category.name %></span>
+    </div>
+  <% end %>
+  <div class="flex justify-between items-center">
+    <span>$ <%= product.price %></span>
+    <%= render partial: "favorite", locals: { product: product } %>
   </div>
-  <h2><%= product.title %></h2>
-  <span>$ <%= product.price %></span>
-  <%= render partial: "favorite", locals: { product: product } %>
-<% end %>
+</section>

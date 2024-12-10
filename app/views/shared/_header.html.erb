@@ -1,13 +1,17 @@
-<%= link_to products_path do %>
-  <h1><%= t('app_title') %></h1>
-<% end %>
-<%= link_to t('.add_product'), new_product_path if Current.user %>
-<%= link_to t('.categories'), categories_path if Current.user&.admin? %>
-<%= link_to t('.sign_in'), new_session_path unless Current.user %>
-<%= link_to t('.sign_up'), new_user_path unless Current.user %>
-<%= link_to t('.logout'), session_path(Current.user.id), data: {
-  turbo_method: :delete,
-  turbo_confirm: t('common.confirm')
-} if Current.user %>
-<%= link_to t('.favorites'), favorites_path if Current.user %>
-<%= link_to t('.shopping_cart'), shopping_carts_path if Current.user %>
+<header class="flex justify-between py-4 md:mx-[10%]">
+  <%= link_to products_path do %>
+    <h1 class="text-3xl font-bold text-main-color"><%= t('app_title') %></h1>
+  <% end %>
+  <section class="flex items-center gap-4">
+    <%= link_to t('.add_product'), new_product_path if Current.user %>
+    <%= link_to t('.categories'), categories_path if Current.user&.admin? %>
+    <%= link_to t('.sign_in'), new_session_path unless Current.user %>
+    <%= link_to t('.sign_up'), new_user_path unless Current.user %>
+    <%= link_to t('.logout'), session_path(Current.user.id), data: {
+      turbo_method: :delete,
+      turbo_confirm: t('common.confirm')
+    } if Current.user %>
+    <%= link_to "#{image_tag "icons/favorite.svg", alt: "My favorites", class: "w-10 h-10"}".html_safe, favorites_path, class: "w-10 h-10 bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90" if Current.user %>
+    <%= link_to "#{image_tag "icons/shopping-cart.svg", alt: "Shopping cart", class: "w-10 h-10"}".html_safe, shopping_carts_path, class: "w-10 h-10 bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90" if Current.user %>
+  </section>
+</header>

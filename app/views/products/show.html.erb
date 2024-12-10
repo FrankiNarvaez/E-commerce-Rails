@@ -1,18 +1,22 @@
-<div>
-  <%= image_tag @product.photo, width: 200, height: 200 if @product.photo.attached? %>
-</div>
+<section class="md:mx-[10%] mt-5 border-2 p-10 flex">
+  <div>
+    <%= image_tag @product.photo.attached? ? @product.photo : "placeholder.jpg", class: "w-72" %>
+  </div>
 
-<h2 class="title"><%= @product.title %></h2>
-<p class="description"><%= @product.description %></p>
-<span class="price">$ <%= @product.price %></span>
-<span>stock: <%= @product.stock %></span>
+  <div>
+    <h2 class="title"><%= @product.title %></h2>
+    <p class="description"><%= @product.description %></p>
+    <span class="price">$ <%= @product.price %></span>
+    <span>stock: <%= @product.stock %></span>
 
-<%= link_to t('.edit'), edit_product_path(@product.id) if @product.owner? %>
-<%= link_to t('.delete'), product_path(@product.id), data: {
-  turbo_method: :delete,
-  turbo_confirm: t('common.confirm')
-} if @product.owner? %>
-<%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) %>
+    <%= link_to t('.edit'), edit_product_path(@product.id) if @product.owner? %>
+    <%= link_to t('.delete'), product_path(@product.id), data: {
+      turbo_method: :delete,
+      turbo_confirm: t('common.confirm')
+    } if @product.owner? %>
+    <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) %>
 
-<%= render partial: "favorite", locals: { product: @product } %>
-<%= link_to t('.add_to_cart'), shopping_carts_path(product_id: @product.id), data: { turbo_method: :post } %>
+    <%= render partial: "favorite", locals: { product: @product } %>
+    <%= link_to t('.add_to_cart'), shopping_carts_path(product_id: @product.id), data: { turbo_method: :post } %>
+  </div>
+</section>
