@@ -7,7 +7,7 @@
 <% end %>
 <%= form_with url: shopping_cart_path(product.id), method: :patch do |form| %>
   <%= form.label :amount %>
-  <%= form.number_field :amount, value: "#{product.shopping_cart.amount}" %>
+  <%= form.number_field :amount, value: "#{product.shopping_cart.amount}", min: 1 %>
 
   <%= form.submit t('.update') %>
 <% end %>

@@ -16,15 +16,12 @@ class ShoppingCartsController < ApplicationController
   def update
     if shopping_cart_params[:amount].to_i > 0
       product.shopping_cart.update(shopping_cart_params)
-      redirect_to shopping_carts_path, notice: t(".updated")
-    else
-      redirect_to shopping_carts_path, alert: t(".invalid_amount")
     end
   end
 
   def destroy
     product.shopping_cart.destroy
-    redirect_to shopping_carts_path, notice: t(".destroyed")
+    redirect_to shopping_carts_path, notice: t(".destroyed"), status: :see_other
   end
 
   private
