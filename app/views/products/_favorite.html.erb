@@ -1,4 +1,4 @@
-<div id="favorite">
+<div id="<%= "favorite-#{product.id}" %>">
   <% if product.favorite %>
     <%= link_to "dislike", favorite_path(product.id), data: { turbo_method: :delete } %>
   <% else %>
