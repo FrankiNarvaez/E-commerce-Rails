@@ -89,6 +89,9 @@ en:
   favorites:
     index:
       title: "My favorites"
+  shopping_carts: 
+    index:
+      title: "My shopping cart"
   users:
     show:
       title: "Profile"

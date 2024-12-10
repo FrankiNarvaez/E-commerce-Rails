@@ -10,3 +10,4 @@
   turbo_confirm: t('common.confirm')
 } if Current.user %>
 <%= link_to t('.favorites'), favorites_path if Current.user %>
+<%= link_to t('.shopping_cart'), shopping_carts_path if Current.user %>

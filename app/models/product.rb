@@ -21,8 +21,14 @@ class Product < ApplicationRecord
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
   has_many :favorites, dependent: :destroy
+  has_many :shopping_carts, dependent: :destroy
 
   def owner?
     user_id == Current.user&.id
+  end
+
+  # Found the user asosiated to shopping cart
+  def shopping_cart
+    shopping_carts.find_by(user: Current.user)
   end
 end
