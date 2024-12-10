@@ -13,6 +13,15 @@ class ShoppingCartsController < ApplicationController
     redirect_to product_path(product.id), notice: t(".created")
   end
 
+  def update
+    if shopping_cart_params[:amount].to_i > 0
+      product.shopping_cart.update(shopping_cart_params)
+      redirect_to shopping_carts_path, notice: t(".updated")
+    else
+      redirect_to shopping_carts_path, alert: t(".invalid_amount")
+    end
+  end
+
   def destroy
     product.shopping_cart.destroy
     redirect_to shopping_carts_path, notice: t(".destroyed")
@@ -22,5 +31,9 @@ class ShoppingCartsController < ApplicationController
 
   def product
     @product ||= Product.find(params[:product_id])
+  end
+
+  def shopping_cart_params
+    params.permit(:amount)
   end
 end

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :favorites, only: %i[ index create destroy ], param: :product_id
-  resources :shopping_carts, only: %i[ index create destroy ], param: :product_id
+  resources :shopping_carts, only: %i[ index create destroy update ], param: :product_id
   resources :users, only: :show, path: "/user", param: :username
   resources :categories, except: :show
   resources :products, path: "/"

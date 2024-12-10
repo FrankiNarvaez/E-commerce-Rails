@@ -4,6 +4,11 @@
   </div>
   <h2><%= product.title %></h2>
   <span>$ <%= product.price %></span>
-  <p><%= product.shopping_cart.amount %></p>
+<% end %>
+<%= form_with url: shopping_cart_path(product.id), method: :patch do |form| %>
+  <%= form.label :amount %>
+  <%= form.number_field :amount, value: "#{product.shopping_cart.amount}" %>
+
+  <%= form.submit t('.update') %>
 <% end %>
 <%= link_to t('.remove'), shopping_cart_path(product.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') } %>

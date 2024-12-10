@@ -97,6 +97,11 @@ en:
       created: "Added to cart"
     destroy:
       destroyed: "Removedo from cart"
+    product:
+      update: "Update"
+    update:
+      updated: "Amount updated"
+      invalid_amount: "The amount is invalid"
   users:
     show:
       title: "Profile"
