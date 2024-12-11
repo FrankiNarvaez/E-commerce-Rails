@@ -121,13 +121,16 @@ en:
       create:
         created: "Successful registration"
       new:
-        have_account: "sign up"
+        have_account: "Already have account?"
+        link_sign_in: "Sign in"
     sessions:
       create:
         created: "Welcome"
         failed: "Invalid credentials!"
       new:
-        no_have_account: "sign in"
+        title: "Login"
+        no_have_account: "Don't have account?"
+        link_sing_up: "Sing up"
       destroy:
         destroyed: "You are logout"
   no_session: "To continue sign in"
