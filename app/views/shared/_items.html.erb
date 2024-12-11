@@ -1,5 +1,5 @@
 <%= link_to t('.add_product'), new_product_path, class: "font-semibold text-xl" if Current.user %>
-<%= link_to t('.categories'), categories_path, class: "font-semibold text-xl" if Current.user&.admin? %>
+<%= link_to t('.categories'), categories_path, class: "font-semibold text-xl", data: { turbo_frame: "modal" } if Current.user&.admin? %>
 <%= link_to t('.sign_in'), new_session_path, class: "font-semibold text-xl" unless Current.user %>
 <%= link_to t('.sign_up'), new_user_path, class: "font-semibold text-xl" unless Current.user %>
 <%= link_to t('.logout'), session_path(Current.user.id), data: {
