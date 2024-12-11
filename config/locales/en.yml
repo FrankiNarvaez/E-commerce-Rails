@@ -106,7 +106,7 @@ en:
     show:
       title: "Profile"
   shared:
-    header:
+    items:
       add_product: "Add product"
       categories: "Categories"
       sign_in: "Sign in"

@@ -27,7 +27,7 @@
 #       enabled: "ON"
 
 en:
-  app_title: "Comercio Electrónico"
+  app_title: "Ecommerce"
   activerecord:
     models:
       product: "Producto"
@@ -105,7 +105,7 @@ en:
     show:
       title: "Perfil"
   shared:
-    header:
+    items:
       add_product: "Agregar producto"
       categories: "Categorías"
       sign_in: "Iniciar sesión"
