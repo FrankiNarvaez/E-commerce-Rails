@@ -1,0 +1,142 @@
+# Los archivos en el directorio config/locales se utilizan para la internacionalización y
+# son cargados automáticamente por Rails. Si deseas usar idiomas distintos al inglés,
+# agrega los archivos necesarios en este directorio.
+#
+# Para usar los idiomas, utiliza `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# En las vistas, esto está aliasado como simplemente `t`:
+#
+#     <%= t("hello") %>
+#
+# Para usar un idioma diferente, configúralo con `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# Esto utilizará la información en config/locales/es.yml.
+#
+# Para aprender más sobre la API, consulta la guía de Internacionalización de Rails
+# en https://guides.rubyonrails.org/i18n.html.
+#
+# Ten en cuenta que YAML interpreta las siguientes cadenas como booleanos sin importar mayúsculas o minúsculas:
+# `true`, `false`, `on`, `off`, `yes`, `no`. Por lo tanto, estas cadenas deben estar entre comillas para ser interpretadas como texto. Por ejemplo:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+en:
+  app_title: "Comercio Electrónico"
+  activerecord:
+    models:
+      product: "Producto"
+      category: "Categoría"
+      user: "Usuario"
+    attributes:
+      product:
+        title: "Título"
+        description: "Descripción"
+        price: "Precio"
+        stock: "Inventario"
+        photo: "Imagen"
+      category:
+        name: "Nombre"
+      user:
+        username: "Nombre de usuario"
+        email: "Correo electrónico"
+        name: "Nombre completo"
+        password: "Contraseña"
+  products:
+    index:
+      title: "Productos"
+      all: "Todos"
+      min_price: "Precio mínimo"
+      max_price: "Precio máximo"
+      filter: "Filtrar"
+      query_text: "Buscar un producto"
+    new:
+      title: "Crear un nuevo producto"
+    edit:
+      title: "Editar producto"
+    create:
+      created: "Tu producto fue creado"
+    update:
+      updated: "Tu producto fue actualizado"
+    destroy:
+      destroyed: "Tu producto fue eliminado"
+    show:
+      add_to_cart: "Agregar al carrito"
+      edit: "Editar"
+      delete: "Eliminar"
+      show_more: "Mostrar más productos de %{username}"
+  categories:
+    index:
+      title: "Categorías"
+      edit: "Editar"
+      delete: "Eliminar"
+      add_category: "Agregar categoría"
+    new:
+      title: "Crear nueva categoría"
+    edit:
+      title: "Editar categoría"
+    create:
+      created: "Tu categoría fue creada"
+    update:
+      updated: "Tu categoría fue actualizada"
+    destroy:
+      destroyed: "Tu categoría fue eliminada"
+  favorites:
+    index:
+      title: "Mis favoritos"
+  shopping_carts: 
+    index:
+      title: "Mi carrito de compras"
+    create:
+      created: "Añadido al carrito"
+    destroy:
+      destroyed: "Eliminado del carrito"
+    product:
+      update: "Actualizar"
+    update:
+      updated: "Cantidad actualizada"
+      invalid_amount: "La cantidad es inválida"
+  users:
+    show:
+      title: "Perfil"
+  shared:
+    header:
+      add_product: "Agregar producto"
+      categories: "Categorías"
+      sign_in: "Iniciar sesión"
+      sign_up: "Registrarse"
+      logout: "Cerrar sesión"
+      favorites: "Mis favoritos"
+  common:
+    confirm: "¿Estás seguro?"
+    back: "Atrás"
+  authentication:
+    users:
+      create:
+        created: "Registro exitoso"
+      new:
+        title: "Registrar"
+        have_account: "¿Ya tienes una cuenta?"
+        link_sign_in: "Iniciar sesión"
+      form:
+        register: "Registrar"
+    sessions:
+      create:
+        created: "Bienvenido"
+        failed: "¡Credenciales inválidas!"
+      new:
+        title: "Iniciar sesión"
+        no_have_account: "¿No tienes una cuenta?"
+        link_sign_up: "Registrarse"
+      form:
+        login: "Iniciar sesión"
+      destroy:
+        destroyed: "Has cerrado sesión"
+  no_session: "Para continuar, inicia sesión"
+  not_authorized: "¡No estás autorizado para realizar esta acción!"
+  not_found: "No encontrado"

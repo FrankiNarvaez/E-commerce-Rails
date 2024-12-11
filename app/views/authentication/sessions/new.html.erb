@@ -1,10 +1,10 @@
-<div class="flex flex-col w-screen h-screen justify-center items-center">
+<div class="flex flex-col w-full h-[90vh] justify-center items-center">
   <h2 class="text-main-color text-5xl font-bold mb-4"><%= t('.title') %></h2>
 
   <%= render "form" %>
 
   <div class="flex gap-1 mt-4">
     <p><%= t('.no_have_account') %></p>
-    <%= link_to t('.link_sing_up'), new_user_path, class: "font-semibold text-main-color" %>
+    <%= link_to t('.link_sign_up'), new_user_path, class: "font-semibold text-main-color" %>
   </div>
 </div>

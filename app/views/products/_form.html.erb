@@ -5,37 +5,37 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="flex flex-col gap-1 min-w-72">
+    <%= form.label :title, class: "font-semibold" %>
+    <%= form.text_field :title, class: "rounded-2xl border-2 focus:border-main-color" %>
+  </div>
+
+  <div class="flex flex-col gap-1 min-w-72">
+    <%= form.label :description, class: "font-semibold" %>
+    <%= form.text_area :description, class: "rounded-2xl border-2 focus:border-main-color" %>
+  </div>
+
+  <div class="flex flex-col gap-1 min-w-72">
+    <%= form.label :price, class: "font-semibold" %>
+    <%= form.number_field :price, class: "rounded-2xl border-2 focus:border-main-color" %>
+  </div>
+
+  <div class="flex flex-col gap-1 min-w-72">
+    <%= form.label :stock, class: "font-semibold" %>
+    <%= form.number_field :stock, class: "rounded-2xl border-2 focus:border-main-color" %>
+  </div>
+
+  <div class="flex flex-col gap-1 min-w-72">
+    <%= form.label :category_id, class: "font-semibold" %>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, class: "rounded-2xl border-2 focus:border-main-color" %>
+  </div>
+
+  <div class="flex flex-col gap-1 min-w-72">
+    <%= form.label :photo, class: "font-semibold" %>
+    <%= form.file_field :photo, class: "rounded-2xl border-2 focus:border-main-color" %>
   </div>
 
   <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
-
-  <div>
-    <%= form.label :stock %>
-    <%= form.number_field :stock %>
-  </div>
-
-  <div>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
-  </div>
-
-  <div>
-    <%= form.label :photo %>
-    <%= form.file_field :photo %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class: "bg-main-color text-white px-2 py-2 rounded-2xl mt-4 w-full" %>
   </div>
 <% end %>

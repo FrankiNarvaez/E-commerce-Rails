@@ -1,10 +1,10 @@
 <%= form_with url: sessions_path do |form| %>
-  <div class="flex flex-col gap-1">
+  <div class="flex flex-col gap-1 min-w-72">
     <%= form.label :login, class: "font-semibold" %>
     <%= form.text_field :login, required: true, class: "rounded-2xl border-2 focus:border-main-color" %>
   </div>
 
-  <div class="flex flex-col mt-4 gap-1">
+  <div class="flex flex-col mt-4 gap-1 min-w-72">
     <%= form.label :password, class: "font-semibold" %>
     <%= form.password_field :password, required: true, class: "rounded-2xl border-2 focus:border-main-color" %>
   </div>
