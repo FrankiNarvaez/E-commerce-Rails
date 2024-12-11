@@ -1,3 +1,5 @@
-<h2><%= t('.title') %></h2>
+<section class="pt-24 mx-[10%]">
+  <h2 class="font-bold text-3xl mb-4"><%= t('.title') %></h2>
 
-<%= turbo_frame_tag :products, src: products_path(favorites: true) %>
+  <%= turbo_frame_tag :products, src: products_path(favorites: true) %>
+</section>
