@@ -2,16 +2,15 @@
   <%= link_to products_path do %>
     <h1 class="text-3xl font-bold text-main-color"><%= t('app_title') %></h1>
   <% end %>
-  <section class="flex items-center gap-4">
-    <%= link_to t('.add_product'), new_product_path if Current.user %>
-    <%= link_to t('.categories'), categories_path if Current.user&.admin? %>
-    <%= link_to t('.sign_in'), new_session_path unless Current.user %>
-    <%= link_to t('.sign_up'), new_user_path unless Current.user %>
-    <%= link_to t('.logout'), session_path(Current.user.id), data: {
-      turbo_method: :delete,
-      turbo_confirm: t('common.confirm')
-    } if Current.user %>
-    <%= link_to "#{image_tag "icons/favorite.svg", alt: "My favorites", class: "w-10 h-10"}".html_safe, favorites_path, class: "w-10 h-10 bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90" if Current.user %>
-    <%= link_to "#{image_tag "icons/shopping-cart.svg", alt: "Shopping cart", class: "w-10 h-10"}".html_safe, shopping_carts_path, class: "w-10 h-10 bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90" if Current.user %>
+
+  <button class="sm:hidden"><%= image_tag "icons/menu.svg", class: "w-6 h-6" %></button>
+  <!-- Menu tablet and desktop -->
+  <section class="sm:flex items-center gap-4 hidden">
+    <%= render partial: "shared/items" %>
+  </section>
+
+  <!-- Menu mobile -->
+  <section class="sm:hidden absolute bg-white top-0 right-0 z-10 h-full flex flex-col min-w-[35%] ease-in-out duration-200 p-5 translate-x-full">
+    <%= render partial: "shared/items" %>
   </section>
 </header>
