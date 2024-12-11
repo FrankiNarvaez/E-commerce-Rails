@@ -121,8 +121,11 @@ en:
       create:
         created: "Successful registration"
       new:
+        title: "Register"
         have_account: "Already have account?"
         link_sign_in: "Sign in"
+      form:
+        register: "Register"
     sessions:
       create:
         created: "Welcome"
@@ -130,7 +133,9 @@ en:
       new:
         title: "Login"
         no_have_account: "Don't have account?"
-        link_sing_up: "Sing up"
+        link_sign_up: "Sing up"
+      form:
+        login: "Login"
       destroy:
         destroyed: "You are logout"
   no_session: "To continue sign in"
