@@ -1,4 +1,4 @@
-<section class="p-5 border-2 hover:border-main-color/50 hover:shadow-zinc-50 w-80 h-auto rounded-xl">
+<section class="p-5 border-2 hover:border-main-color/50 hover:shadow-zinc-50 w-5/6 sm:w-[calc(40%_-_.5rem)] md:w-[calc(33.33333%_-_.7rem)] h-auto rounded-xl">
   <%= link_to product_path(product.id), class: "product", "data-turbo-frame": "_top" do %>
     <%= image_tag product.photo.attached? ? product.photo : "placeholder.jpg", class: "w-full rounded" %>
     <div class="flex justify-between mt-3">

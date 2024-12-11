@@ -1,22 +1,22 @@
 <%= turbo_frame_tag 'home' do %>
-  <%= form_with url: products_path, method: :get, class: "pt-20 mx-[10%]" do |form| %>
+  <%= form_with url: products_path, method: :get do |form| %>
     <%= form.text_field :query_text, placeholder: t('.query_text'), onChange: 'this.form.requestSubmit()', value: params[:query_text], class: "w-full rounded-xl my-2 border-gray-400" %>
     <div class="flex gap-1 sm:gap-2 md:gap-4">
       <%= form.number_field :min_price, placeholder: t('.min_price'), onChange: 'this.form.requestSubmit()', value: params[:min_price], class: "w-1/3 rounded-xl border-gray-400" %>
       <%= form.number_field :max_price, placeholder: t('.max_price'), onChange: 'this.form.requestSubmit()', value: params[:max_price], class: "w-1/3 rounded-xl border-gray-400" %>
-      <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [ t(".#{order}"), order ] }, params[:order_by]), {}, { onChange: 'this.form.requestSubmit()', class: "w-1/3 rounded-xl border-gray-400" } %>
+      <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [ t(".#{order}"), order ] }, params[:order_by]), {}, { onChange: 'this.form.requestSubmit()', class: "w-1/3 rounded-xl border-gray-400 text-gray-500" } %>
     </div>
   <% end %>
 
-  <div class="mx-[10%] my-4 flex gap-2 overflow-scroll">
-    <%= link_to t('.all'), products_path, class: "border-2 rounded-xl py-1 px-2" %>
+  <div class="my-4 flex gap-2 overflow-auto">
+    <%= link_to t('.all'), products_path, class: "border-2 rounded-xl py-1 px-2 hover:border-main-color" %>
     <%= render partial: "category", collection: @categories %>
   </div>
 
   <%= turbo_frame_tag :products, class: "" do %>
-    <%= turbo_frame_tag "products-#{@pagy.page}", class: "products flex flex-col justify-center items-center gap-4 sm:flex-row sm:flex-wrap md:mx-[10%]" do %>
+    <%= turbo_frame_tag "products-#{@pagy.page}", class: "products flex flex-col justify-center items-center gap-4 sm:flex-row sm:flex-wrap" do %>
       <%= render partial: "product", collection: @products %>
-      <%= turbo_frame_tag "products-#{@pagy.next}", class: "products", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+      <%= turbo_frame_tag "products-#{@pagy.next}", class: "products flex flex-col justify-center items-center gap-4 sm:flex-row sm:flex-wrap", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
     <% end %>
   <% end %>
 <% end %>
