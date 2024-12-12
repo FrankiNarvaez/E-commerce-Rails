@@ -7,7 +7,7 @@
   turbo_confirm: t('common.confirm')
 }, class: "font-semibold text-xl" if Current.user %>
 <div class="flex gap-2 mt-2 lg:mt-0">
-  <%= link_to "#{image_tag "icons/profile.svg", alt: "My profile", class: "w-6 h-6"}".html_safe, user_path(Current.user.username), class: "bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90" if Current.user %>
-  <%= link_to "#{image_tag "icons/favorite.svg", alt: "My favorites", class: "w-6 h-6"}".html_safe, favorites_path, class: "bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90" if Current.user %>
-  <%= link_to "#{image_tag "icons/shopping-cart.svg", alt: "Shopping cart", class: "w-6 h-6"}".html_safe, shopping_carts_path, class: "bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90" if Current.user %>
+  <%= link_to "#{image_tag "icons/profile.svg", alt: "My profile", class: "w-6 h-6"}".html_safe, user_path(Current.user.username), class: "bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90 active:scale-90 duration-500" if Current.user %>
+  <%= link_to "#{image_tag "icons/favorite.svg", alt: "My favorites", class: "w-6 h-6"}".html_safe, favorites_path, class: "bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90 active:scale-90 duration-500" if Current.user %>
+  <%= link_to "#{image_tag "icons/shopping-cart.svg", alt: "Shopping cart", class: "w-6 h-6"}".html_safe, shopping_carts_path, class: "bg-main-color text-white flex justify-center items-center rounded-full p-2 hover:bg-main-color/90 active:scale-90 duration-500" if Current.user %>
 </div>

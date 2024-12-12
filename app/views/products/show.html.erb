@@ -15,9 +15,9 @@
 
       <div class="flex justify-between items-center mb-2 sm:gap-2 md:gap-4">
         <%= render partial: "favorite", locals: { product: @product } %>
-        <%= link_to shopping_carts_path(product_id: @product.id), data: { turbo_method: :post }, class: "bg-main-color flex gap-2 text-white p-2 rounded-2xl items-center" do %>
-          <%= image_tag "icons/add-shopping-cart.svg", class: "w-7 h-7" %>
-          <p>Add to cart</p>
+        <%= link_to shopping_carts_path(product_id: @product.id), data: { turbo_method: :post }, class: "CartBtn bg-main-color w-36 h-10 rounded-xl border-none flex items-center cursor-pointer duration-500 overflow-hidden shadow relative text-white font-semibold active:scale-95" do %>
+          <%= image_tag "icons/add-shopping-cart.svg", class: "IconContainer absolute left-[-50px] w-7 h-7 bg-transparent rounded-2xl flex items-center justify-center overflow-hidden z-10 duration-500" %>
+          <p class="h-full w-full flex items-center justify-center z-[5] duration-500 text">Add to cart</p>
         <% end %>
       </div>
     </div>
@@ -32,3 +32,16 @@
     </div>
   </div>
 </section>
+
+<style>
+  .CartBtn:hover .IconContainer {
+    transform: translateX(58px);
+    border-radius: 40px;
+    transition-duration: .5s;
+  }
+
+  .CartBtn:hover .text {
+    transform: translate(10px,0px);
+    transition-duration: .5s;
+  }
+</style>

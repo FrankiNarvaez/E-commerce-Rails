@@ -1,14 +1,46 @@
-<%= link_to product_path(product.id), class: "product", "data-turbo-frame": "_top" do %>
-  <div>
-    <%= image_tag product.photo, width: 200, height: 200 if product.photo.attached? %>
-  </div>
-  <h2><%= product.title %></h2>
-  <span>$ <%= product.price %></span>
-<% end %>
-<%= form_with url: shopping_cart_path(product.id), method: :patch do |form| %>
-  <%= form.label :amount %>
-  <%= form.number_field :amount, value: "#{product.shopping_cart.amount}", min: 1 %>
+<section class="border-2 border-gray-300 rounded-xl flex gap-3 relative my-4 p-4 max-w-2xl mx-3 sm:mx-auto">
+  <!-- <%= link_to product_path(product.id), class: "product flex gap-5", "data-turbo-frame": "_top" do %> -->
+    <%= image_tag product.photo.attached? ? product.photo : "placeholder.jpg", class: "max-w-32 rounded" %>
+    <div>
+      <h2 class="font-bold mb-2"><%= product.title %></h2>
+      <span class="font-semibold">$ <%= product.price %> c/u</span>
+      <div class="flex gap-4 mt-2">
+        <%= form_with url: shopping_cart_path(product.id), method: :patch, class: "flex items-center gap-2" do |form| %>
+          <!-- <%= form.label :amount %> -->
+          <%= form.number_field :amount, value: "#{product.shopping_cart.amount}", min: 1, class: "w-20 p-1 text-center rounded-2xl border-2 border-gray-300" %>
+    
+          <%= form.submit t('.update'), class: "flex items-center justify-center px-2 h-9 rounded-3xl bg-main-color text-white font-semibold active:scale-90 duration-300" %>
+        <% end %>
+    
+        <%= link_to shopping_cart_path(product.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') }, class: "Btn flex items-center justify-start w-9 h-9 border-none rounded-full cursor-pointer overflow-hidden duration-300 shadow bg-red-600 sm:hover:w-32 hover:rounded-3xl active:scale-90 relative" do %>
+          <%= image_tag "icons/trash.svg", class: "w-full p-2 transition-all duration-300 flex items-center justify-center sign" %>
+          <p class="absolute right-0 w-0 opacity-0 text-white font-semibold transition-all duration-300 text hidden sm:block">Remove</p>
+        <% end %>
+      </div>
+    </div>
+  <!-- <% end %> -->
+</section>
 
-  <%= form.submit t('.update') %>
-<% end %>
-<%= link_to t('.remove'), shopping_cart_path(product.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') } %>
+<style>
+  .Btn:hover .sign {
+    width: 40%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 65%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+  }
+
+  input[type=number] {
+      -moz-appearance: textfield; /* Para Firefox */
+  }
+</style>

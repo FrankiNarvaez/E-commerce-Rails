@@ -1,4 +1,4 @@
-<h2><%= t('.title') %></h2>
+<h2 class="text-3xl font-bold"><%= t('.title') %></h2>
 
 <%= turbo_frame_tag :products do %>
   <%= turbo_frame_tag "products-#{@pagy.page}", class: "products" do %>

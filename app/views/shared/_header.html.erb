@@ -1,4 +1,4 @@
-<header class="flex flex-wrap lg:flex-nowrap justify-between py-4 sm:px-[10%] fixed w-screen backdrop-blur-md" data-controller="menu">
+<header class="flex flex-wrap lg:flex-nowrap justify-between py-4 sm:px-[10%] fixed w-screen backdrop-blur-md z-20" data-controller="menu">
   <%= link_to products_path, class: "text-3xl font-bold text-main-color flex items-center" do %>
     <h1><%= t('app_title') %></h1>
   <% end %>
@@ -21,44 +21,44 @@
 </header>
 
 <style>
-.bars {
-  width: 100%;
-  height: 3px;
-  border-radius: 4px;
-}
+  .bars {
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+  }
 
-#bar2 {
-  transition-duration: .8s;
-}
+  #bar2 {
+    transition-duration: .8s;
+  }
 
-#bar1,#bar3 {
-  width: 70%;
-}
+  #bar1,#bar3 {
+    width: 70%;
+  }
 
-#checkbox:checked + .toggle .bars {
-  position: absolute;
-  transition-duration: .5s;
-}
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
 
-#checkbox:checked + .toggle #bar2 {
-  transform: scaleX(0);
-  transition-duration: .5s;
-}
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
 
-#checkbox:checked + .toggle #bar1 {
-  width: 100%;
-  transform: rotate(45deg);
-  transition-duration: .5s;
-}
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
 
-#checkbox:checked + .toggle #bar3 {
-  width: 100%;
-  transform: rotate(-45deg);
-  transition-duration: .5s;
-}
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
 
-#checkbox:checked + .toggle {
-  transition-duration: .5s;
-  transform: rotate(180deg);
-}
+  #checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }
 </style>
