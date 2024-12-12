@@ -37,3 +37,8 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+/.vscode/*
+!/vscode/.keep
+
+/.idea
