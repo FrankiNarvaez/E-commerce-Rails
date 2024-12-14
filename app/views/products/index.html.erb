@@ -9,8 +9,9 @@
   <% end %>
 
   <div class="my-4 flex gap-2 overflow-auto">
-    <%= link_to t('.all'), products_path, class: "border-2 rounded-xl py-1 px-2 hover:border-main-color" %>
-    <%= render partial: "category", collection: @categories %>
+    <%= render(CategoryComponent.new) %>
+
+    <%= render(CategoryComponent.with_collection(@categories)) %>
   </div>
 
   <%= turbo_frame_tag :products, class: "" do %>
