@@ -141,3 +141,5 @@ en:
   no_session: "To continue sign in"
   not_authorized: "You aren't authorized for this action!"
   not_found: "Not found"
+  category_component:
+    all: "All"
