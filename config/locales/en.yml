@@ -143,3 +143,7 @@ en:
   not_found: "Not found"
   category_component:
     all: "All"
+  user_mailer:
+    welcome:
+      subject: "Welcome to my Ecommerce"
+      welcome_message: "Hey %{name}, welcome to my Ecommerce done with Ruby On Rails :D"
