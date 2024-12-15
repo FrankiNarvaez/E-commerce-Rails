@@ -11,6 +11,11 @@ class UsersController < ApplicationController
 
   def update
     authorize! @user
+    if @user.update(user_params)
+      redirect_to user_path(@user.username), notice: t(".updated")
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
@@ -20,6 +25,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.permit(:name, :username, :country, :city)
+    params.require(:user).permit(:name, :username, :country, :city)
   end
 end

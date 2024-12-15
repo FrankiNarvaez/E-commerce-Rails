@@ -107,6 +107,8 @@ es:
       full_name: "Nombre completo"
       country: "País"
       city: "Ciudad"
+    update:
+      updated: "Actualizaste tu información"
   shared:
     items:
       add_product: "Agregar producto"

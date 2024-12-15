@@ -19,8 +19,8 @@
         <p><%= t('.city') %>: </p>
         <%= @user.city %>
       </div>
+      <%= link_to t('.edit'), edit_user_path %>
     </div>
-    <%= link_to t('.edit'), edit_user_path %>
   </section>
 <% else %>
   <h2 class="text-3xl font-bold mb-4"><%= @user.name %></h2>

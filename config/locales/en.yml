@@ -106,6 +106,8 @@ en:
     show:
       title: "Profile"
       full_name: "Full name"
+    update:
+      updated: "information updated"
   shared:
     items:
       add_product: "Add product"
