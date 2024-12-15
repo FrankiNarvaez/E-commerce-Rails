@@ -105,6 +105,7 @@ en:
   users:
     show:
       title: "Profile"
+      full_name: "Full name"
   shared:
     items:
       add_product: "Add product"

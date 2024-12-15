@@ -1,3 +1,29 @@
-<h2  class="text-3xl font-bold mb-4"><%= @user.name %></h2>
+<% if Current.user&.id == @user.id %>
+  <h2 class="text-3xl font-bold mb-4">My profile</h2>
+  <section class="flex flex-col mx-5 mb-5 gap-2 sm:flex-row items-center justify-center">
+    <%= image_tag "placeholder.jpg", class: "w-32 h-32 rounded-full" %>
+    <div>
+      <div class="flex gap-1">
+        <p><%= t('.full_name') %>:</p>
+        <%= @user.name %>
+      </div>
+      <div class="flex gap-1">
+        <p>Username: </p>
+        <%= @user.username %>
+      </div>
+      <div class="flex gap-1">
+        <p><%= t('.country') %>: </p>
+        <%= @user.country %>
+      </div>
+      <div class="flex gap-1">
+        <p><%= t('.city') %>: </p>
+        <%= @user.city %>
+      </div>
+    </div>
+    <%= link_to t('.edit'), edit_user_path %>
+  </section>
+<% else %>
+  <h2 class="text-3xl font-bold mb-4"><%= @user.name %></h2>
+<% end %>
 
 <%= turbo_frame_tag :products, src: products_path(user_id: @user.id) %>

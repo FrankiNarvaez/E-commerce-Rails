@@ -104,6 +104,9 @@ es:
   users:
     show:
       title: "Perfil"
+      full_name: "Nombre completo"
+      country: "País"
+      city: "Ciudad"
   shared:
     items:
       add_product: "Agregar producto"
