@@ -53,7 +53,7 @@ gem "pagy"
 gem "tailwindcss-rails", "~> 3.0"
 
 # View components
-gem "view_component", "~> 3.20"
+gem "view_component", "~> 3.21"
 
 # Sidekiq to background job
 gem "sidekiq", "~> 7.3"
