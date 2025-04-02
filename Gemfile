@@ -56,7 +56,7 @@ gem "tailwindcss-rails", "~> 3.0"
 gem "view_component", "~> 3.20"
 
 # Sidekiq to background job
-gem "sidekiq", "~> 7.3"
+gem "sidekiq", "~> 8.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
